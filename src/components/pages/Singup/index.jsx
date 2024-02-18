@@ -12,7 +12,7 @@ const Singup = () => {
   const [errors, setErrors] = useState([]);
 
   const handleSinup = async (e) => {
-    const res = await fetch("http://localhost:7000/users", {
+    const res = await fetch("https://phdlp9-8080.csb.app/users", {
       method: "GET",
     });
 
@@ -27,8 +27,11 @@ const Singup = () => {
     });
 
     if (isCheck) {
-      const res = await fetch("http://localhost:7000/users", {
+      const res = await fetch("https://phdlp9-8080.csb.app/users", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           username: newUser.username,
           password: newUser.password,

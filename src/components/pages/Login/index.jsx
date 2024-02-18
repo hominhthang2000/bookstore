@@ -9,7 +9,7 @@ const Login = () => {
   });
   const [errors, setErrors] = useState([]);
   const handleSinup = async (e) => {
-    const res = await fetch("http://localhost:7000/users", {
+    const res = await fetch("https://phdlp9-8080.csb.app/users", {
       method: "GET",
     });
 

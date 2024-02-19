@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Singup = () => {
   const navigate = useNavigate();
@@ -38,11 +39,11 @@ const Singup = () => {
         }),
       });
       if (res.ok) {
-        alert("okkkk");
+        toast.success("Đăng ký thành công");
         navigate("/Login");
       }
     } else {
-      alert("user nay da ton tai !");
+      toast.error("user nay da ton tai !");
     }
   };
 
@@ -170,7 +171,7 @@ const Singup = () => {
                 />
                 {errors.includes("passwordNotSame") && (
                   <span className="text-[red] text-[12px]">
-                    Mat khau deu giong
+                    Mat khau không giong
                   </span>
                 )}
               </div>

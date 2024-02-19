@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const navigate = useNavigate();
   const [newUser, setNewUser] = useState({
@@ -26,12 +27,13 @@ const Login = () => {
       if (userData.password === newUser.password) {
         const { password, ...others } = userData;
         localStorage.setItem("user", JSON.stringify(others));
+        toast.success("Đăng nhập thành công");
         navigate("/");
       } else {
-        alert("mk sai");
+        toast.error("Mật khẩu sai. Vui lòng nhập lại ");
       }
     } else {
-      alert("user nay k ton tai !");
+      toast.error("Người dùng không tồn tại");
     }
   };
   const isValidateUser = () => {

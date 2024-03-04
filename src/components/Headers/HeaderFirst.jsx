@@ -52,34 +52,31 @@ const dataCagetory = [
 ];
 const datamenu = [
   {
-    label: "Arts & Photography",
+    label: "CÁC DÒNG SÁCH",
     childrenMenu: [
-      { label: "Bags & Cases" },
-      { label: "Binoculars & Scopes" },
-      { label: "Digital Cameras.3" },
-      { label: "Film Photography" },
-      { label: "Lighting & Studio" },
+      { label: "Sách văn học" },
+      { label: "Sách thiếu nhi" },
+      { label: "Sách ngoại văn" },
+      { label: "Sách lịch sử" },
+      { label: "Truyện trinh thám" },
+      { label: "Sách kinh tế" },
     ],
   },
   {
-    label: "Biographies",
+    label: "VĂN PHÒNG PHẨM",
     childrenMenu: [
-      { label: "Bags & Cases" },
-      { label: "Binoculars & Scopes" },
-      { label: "Digital Cameras.3" },
-      { label: "Film Photography" },
-      { label: "Lighting & Studio" },
+      { label: "Bút - Viết" },
+      { label: "Dụng cụ học sinh" },
+      { label: "Dụng cụ văn phòng" },
     ],
   },
 ];
 const dataPage = [
-  { label: "Cart" },
-  { label: "Checkout" },
-  { label: "Wishlist" },
-  { label: "Compare" },
-  { label: "Login" },
-  { label: "My account" },
-  { label: "Order Complete" },
+  { label: "Chính sách bảo mật" },
+  { label: "Hướng dẫn mua hàng" },
+  { label: "Chính sách bảo hàng" },
+  { label: "Chính sách đổi trả" },
+  { label: "Phương thức thanh toán" },
 ];
 const HeaderFirst = () => {
   const [isMenu, setIsMenu] = useState(false);
@@ -111,9 +108,9 @@ const HeaderFirst = () => {
     setUser(null);
   };
   return (
-    <div>
+    <div className="bg-[#e5e7eb]">
       <div className="container">
-        <div className="grid-cols-12 mt-3 grid items-center">
+        <div className="grid-cols-12 py-3 grid items-center">
           <div className="flex col-span-3 items-center">
             <img
               className=" mr-2 h-24 w-auto"
@@ -190,7 +187,7 @@ const HeaderFirst = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="sticky top-0 right-0 left-0">
         <div className="bg-[#62ab00] ">
           <div className="container">
             <div className="h-[80px]  grid-cols-12 mt-3 grid items-center">
@@ -210,7 +207,7 @@ const HeaderFirst = () => {
                       />
                     </div>
 
-                    <div className="flex">Browse categories</div>
+                    <div className="flex">Danh mục sản phẩm</div>
                   </div>
                 </div>
                 {isMenu && (
@@ -260,7 +257,7 @@ const HeaderFirst = () => {
                 <div className="flex  text-white  ">
                   <ul className="flex items-center  gap-4 ">
                     <li className="hover:text-black cursor-pointer  flex items-center h-full ">
-                      <span>GIỚI THIỆU</span>
+                      <Link to="/"> TRANG CHỦ</Link>
                     </li>
                     <li
                       className=" h-full hover:text-black cursor-pointer flex items-center relative"
@@ -338,11 +335,11 @@ const HeaderFirst = () => {
                       )}
                     </li>
 
-                    <li className="hover:text-black cursor-pointer h-full  flex items-center">
+                    {/* <li className="hover:text-black cursor-pointer h-full  flex items-center">
                       <span>BLOGS</span>
-                    </li>
+                    </li> */}
                     <li className="hover:text-black cursor-pointer h-full  flex items-center">
-                      <span> LIÊN HỆ</span>
+                      <Link to="/Contact">LIÊN HỆ</Link>
                     </li>
                   </ul>
                 </div>

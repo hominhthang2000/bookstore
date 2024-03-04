@@ -86,3 +86,52 @@ h1 {
   text-shadow: rgba(0, 0, 0, 0.6) 1px 0, rgba(0, 0, 0, 0.6) 1px 0,
     rgba(0, 0, 0, 0.6) 0 1px, rgba(0, 0, 0, 0.6) 0 1px;
 }
+
+.box-cate:hover > img {
+  transform: scale(1.1);
+}
+.next .slick-prev:before,
+.next .slick-next:before {
+  color: #62ab00;
+}
+.next .slick-prev {
+  z-index: 1;
+  left: 2px;
+}
+.next .slick-next {
+  z-index: 1;
+  right: 2px;
+}
+.images {
+  background-image: url("https://files.123freevectors.com/wp-content/original/131316-green-polygon-background-design-vector.jpg");
+  background-size: cover;
+}
+.imagescontact {
+  width: 1920px;
+  height: 350px;
+  background-size: cover;
+  background-image: url("https://img.freepik.com/premium-photo/abstract-green-background-with-texture_196038-3697.jpg");
+}
+.border_underline {
+  position: relative;
+  margin-top: 5px;
+}
+.border_underline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  border-bottom: 2px solid #62ab00;
+}
+
+.border_underline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 30px;
+  width: 220px;
+  height: 100%;
+  border-bottom: 2px solid #62ab00;
+}

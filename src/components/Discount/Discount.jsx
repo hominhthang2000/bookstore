@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 
-const dataDiscount = [
+export const dataDiscount = [
   {
     discount: "Giảm 30%",
     img: "./Images/doi-song-bi-an-cua-cay-tb-2021.jpg",

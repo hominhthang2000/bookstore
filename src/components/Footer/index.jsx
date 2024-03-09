@@ -168,46 +168,30 @@ const Footer = () => {
           <div className="border_underline"></div>
 
           <div className="mt-[40px] flex">
-            <Link
-              className="flex"
-              target="_blank"
-              to="https://api.whatsapp.com/send/?phone=84775551487&text&type=phone_number&app_absent=0"
-            >
+            <Link className="flex" target="_blank" to="/PrivacyPolicy">
               <p className="ml-[5px] text-[17px] text-gray-600 hover:text-[#62ab00]">
                 + Chính sách bảo mật
               </p>
             </Link>
           </div>
           <div className="mt-[5px] flex">
-            <Link
-              className="flex"
-              target="_blank"
-              to="mailto:Rongxanh@gmail.com"
-            >
+            <Link className="flex" target="_blank" to="/ShoppingGuide">
               <p className="ml-[5px] text-[17px] text-gray-600 hover:text-[#62ab00]">
-                + Hướng dẫn mua hàng
+                + Phương thức thanh toán
               </p>
             </Link>
           </div>
           <div className="mt-[5px] flex">
-            <Link
-              className="flex"
-              target="_blank"
-              to="mailto:Rongxanh@gmail.com"
-            >
+            <Link className="flex" target="_blank" to="/Guarantee">
               <p className="ml-[5px] text-[17px] text-gray-600 hover:text-[#62ab00]">
-                + Chính sách bảo hàng
+                + Chính sách bào hành
               </p>
             </Link>
           </div>
           <div className="mt-[5px] flex">
-            <Link
-              className="flex"
-              target="_blank"
-              to="mailto:Rongxanh@gmail.com"
-            >
+            <Link className="flex" target="_blank" to="/Refund">
               <p className="ml-[5px] text-[17px] text-gray-600 hover:text-[#62ab00]">
-                + chính sách đổi trả
+                + Chính sách đổi trả
               </p>
             </Link>
           </div>

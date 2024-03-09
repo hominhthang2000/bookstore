@@ -72,11 +72,10 @@ const datamenu = [
   },
 ];
 const dataPage = [
-  { label: "Chính sách bảo mật" },
-  { label: "Hướng dẫn mua hàng" },
-  { label: "Chính sách bảo hàng" },
-  { label: "Chính sách đổi trả" },
-  { label: "Phương thức thanh toán" },
+  { label: "Chính sách bảo mật", link: "/PrivacyPolicy" },
+  { label: "Phương thức thanh toán", link: "/ShoppingGuide" },
+  { label: "Chính sách bào hành", link: "/Guarantee" },
+  { label: "Chính sách đổi trả", link: "/Refund" },
 ];
 const HeaderFirst = () => {
   const [isMenu, setIsMenu] = useState(false);
@@ -326,9 +325,11 @@ const HeaderFirst = () => {
                               key={index}
                               className="border-solid hover:bg-slate-300 w-48 px-6 py-2 border-[1px] border-[#d9d9d9] relative bg-[white]"
                             >
-                              <div className=" text-[14px] hover:text-[#62ab00] ">
-                                {item.label}
-                              </div>
+                              <Link to={item.link}>
+                                <div className=" text-[14px] hover:text-[#62ab00] ">
+                                  {item.label}
+                                </div>
+                              </Link>
                             </div>
                           ))}
                         </div>

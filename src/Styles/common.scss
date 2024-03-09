@@ -135,3 +135,7 @@ h1 {
   height: 100%;
   border-bottom: 2px solid #62ab00;
 }
+.text-hover:hover .zoom {
+  transform: scale(1.2);
+  transition: all 1.5s linear;
+}

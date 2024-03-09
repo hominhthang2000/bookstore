@@ -1,129 +1,7 @@
 import React from "react";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const dataDiscount = [
-  {
-    discount: "  -30%",
-    img: "./Images/toi_ve_cc_af4a7b96100e49c8a9dbbdd1cfc4178c_medium.webp",
-    tilte: "Tôi Vẽ - Phương Pháp Tự Học Vẽ Truyện Tranh",
+import { Link } from "react-router-dom";
+import { booksData } from "../../../data/books";
 
-    price: "120,000đ",
-    pricediscount: "100,000đ",
-    icon: (
-      <FontAwesomeIcon
-        icon={faCartShopping}
-        style={{ color: "  #333333" }}
-        className="hover:!text-red-500"
-      />
-    ),
-  },
-  {
-    discount: "  -10%",
-    img: "./Images/tb30-1_7a670519dc344827af0cc77ba6c15afa_medium.webp",
-    tilte: "Can Trường Bước Tiếp (Tái bản 2023)",
-
-    price: "96,000đ",
-    pricediscount: "86,300đ",
-    icon: (
-      <FontAwesomeIcon
-        icon={faCartShopping}
-        style={{ color: "  #333333" }}
-        className="hover:!text-red-500"
-      />
-    ),
-  },
-  {
-    discount: "  -20%",
-    img: "./Images/thiet_ke_chua_co_ten__25__a2f2b864221d4ba89a32de2a165db1d5_medium.jpg",
-    tilte: "Đời sống bí ẩn của cây",
-
-    price: "39,000₫đ",
-    pricediscount: "31,200₫đ",
-    icon: (
-      <FontAwesomeIcon
-        icon={faCartShopping}
-        style={{ color: "  #333333" }}
-        className="hover:!text-red-500"
-      />
-    ),
-  },
-  {
-    discount: "  -10%",
-    img: "./Images/083ff9aa590e12891cd998cd1e2195d6_15a7dceb0aa54404b8bb3bee5140e952_medium.webp",
-    tilte: "Gánh Gánh... Gồng Gồng... (Xuân Phượng hồi ký)",
-
-    price: "160,000đ",
-    pricediscount: "144,000đ",
-    icon: (
-      <FontAwesomeIcon
-        icon={faCartShopping}
-        style={{ color: "  #333333" }}
-        className="hover:!text-red-500"
-      />
-    ),
-  },
-
-  {
-    discount: "  -30%",
-    img: "./Images/thiet_ke_chua_co_ten__40__ec2b0e395b764f6f9c4d7ccbe57d8e4a_medium.webp",
-    tilte: "Bộ Học Toán Thật Đơn Giản Cho Trẻ Từ 2-6 Tuổi (Cuốn Lẻ và Combo)",
-
-    price: "120,000đ",
-    pricediscount: "100,000đ",
-    icon: (
-      <FontAwesomeIcon
-        icon={faCartShopping}
-        style={{ color: "  #333333" }}
-        className="hover:!text-red-500"
-      />
-    ),
-  },
-  {
-    discount: "  -20%",
-    img: "./Images/thiet_ke_chua_co_ten__8__9871b4f2fe3245e49f587d39c5378e87_medium.jpg",
-    tilte: "Bộ Tủ Sách Thế Giới Động Vật (Cuốn Lẻ Và Combo)",
-
-    price: "50,000đ",
-    pricediscount: "40,000đ",
-    icon: (
-      <FontAwesomeIcon
-        icon={faCartShopping}
-        style={{ color: "  #333333" }}
-        className="hover:!text-red-500"
-      />
-    ),
-  },
-  {
-    discount: "  -10%",
-    img: "./Images/8935074129512_1f48737ab3ab4530a23afdb9af868380_medium.webp",
-    tilte: "Bí quyết hội họa - Luyện vẽ hình khối",
-
-    price: "88,000đ",
-    pricediscount: "79,200đ",
-    icon: (
-      <FontAwesomeIcon
-        icon={faCartShopping}
-        style={{ color: "  #333333" }}
-        className="hover:!text-red-500"
-      />
-    ),
-  },
-  {
-    discount: "  -10%",
-    img: "./Images/8935074129505_712fcb003c70456db273aec4e9f81088_medium.webp",
-    tilte: "Bí Quyết Hội Họa - Ký Họa Chân Dung",
-
-    price: "70,000đ",
-    pricediscount: "63,000đ",
-    icon: (
-      <FontAwesomeIcon
-        icon={faCartShopping}
-        style={{ color: "  #333333" }}
-        className="hover:!text-red-500"
-      />
-    ),
-  },
-];
 function ListNewBook() {
   return (
     <div>
@@ -147,8 +25,9 @@ function ListNewBook() {
         <div className="flex flex-row">
           <div className="flex gap-4 ">
             <div className="w-full  grid grid-cols-12 ">
-              {dataDiscount.map((item, index) => (
-                <div
+              {booksData?.map((item, index) => (
+                <Link
+                  to={`/Productss?slug=${item.slug}`}
                   key={index}
                   className="bg-white rounded-lg m-1 col-span-3 dark:bg-gray-800 p-2 px-[5px] "
                 >
@@ -180,7 +59,7 @@ function ListNewBook() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
